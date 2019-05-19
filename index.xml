@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on ABC Auto Repair</title>
+    <link>http://example.org/</link>
+    <description>Recent content in Home on ABC Auto Repair</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>About page!</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://example.org/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/contact/</guid>
+      <description>Contact page!</description>
+    </item>
+    
+    <item>
+      <title>Trucks</title>
+      <link>http://example.org/services/trucks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/services/trucks/</guid>
+      <description>Trucks page!</description>
+    </item>
+    
+  </channel>
+</rss>

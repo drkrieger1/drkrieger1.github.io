@@ -1,0 +1,58 @@
+/* Core page sytling */
+
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    background-color: #111111;
+    color:white;
+    flex-shrink: 0;
+  }
+   #logos {
+    padding-top:5px;
+    padding-bottom:10px;
+    width:100%;
+    background-color: #333333;
+    margin-bottom: 5px; 
+  }
+  .footer_logo{
+    text-align: center;
+    padding-top: 10px;
+  } 
+ #home{
+   /* background-color: red; */
+  background-image: url("/img/shop_home.jpg");
+  background-size: cover;
+ }
+
+ @media only screen and (max-width: 900px) {
+  #mase{
+    display: none;
+  }
+  .arrow{
+    display: none;
+  }
+}
+@media only screen and (max-width: 765px) {
+  #vw{
+    width: 85%;
+    margin-bottom: -70px  !important; 
+  }
+  #shop-title{
+    font-size: 5em !important;
+  }
+  #warran{
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-top:solid black .5px;
+    border-bottom:solid black .5px;
+  }
+}
+
