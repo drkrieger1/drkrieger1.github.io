@@ -1,0 +1,389 @@
+body{
+  background-color: #343a40;
+}
+
+input[type=number] { 
+    outline: none;
+    border:none;
+    height: 100px;
+    /* font-family: "courier"; */
+    font-family: Helvetica;
+    background-color: #312f2e;
+
+    font-size:13vw;
+    margin: 0px;
+    padding:0px;
+    width: 100%;
+    text-align: center;
+    color:white;
+ }
+/* Header */
+#brand{
+  color: white;
+  font-family: arial;
+  
+}
+.nav_items{
+  font-family: helvetica;
+}
+ /* keypad */
+.pad_back{ 
+    max-width:1000px;
+    
+}
+
+.keypad_container{
+    width: 100%;
+    
+}
+
+.mil {
+    display: flex;
+}
+
+.mil div:first-child{
+    flex: 3;
+    display:flex;
+ }
+
+.mil div:last-child{
+    flex: 1;
+}
+
+.meter {
+    display: flex;
+}
+
+.meter div:first-child{
+    flex: 3;
+ }
+
+.meter div:last-child{
+    flex: 1;
+  }
+
+.pad_container{
+  box-shadow: 0px 6px 5px -1px rgba(0,0,0,0.75);
+  max-width: 617px;
+  
+}
+
+.display {
+   display: flex;
+   background-color: #312f2e;
+}
+
+.status{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.ark{
+  flex: 1;
+  width: 100%;
+}
+
+/* Error state */
+.range_error{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.range_error p{
+    font-size: 2.5vw;
+    font-weight: bold;
+    line-height: 1;
+    font-family: arial;
+    color: #FF073A;
+}
+.range_error i{
+    font-size: 5vw;
+    margin-bottom: 5px;
+    color: #FF073A;
+}
+
+/* Valid state */
+.range_valid{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.range_valid p{
+    font-size: 2.5vw;
+    font-weight: bold;
+    line-height: 1;
+    font-family: arial;
+    color: rgba(18, 18, 17, 0.4);
+}
+.range_valid i{
+    font-size: 5vw;
+    margin-bottom: 5px;
+    color: rgba(18, 18, 17, 0.4);
+}
+
+.outputs{
+    flex:4;
+}
+
+#warning {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    text-align: center;
+}
+
+#warning_off{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    text-align: center;
+}
+
+.mil_label {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.mil_label p{
+    margin:0px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mil_label p:first-child{
+     font-family: arial;
+     font-size: 1.4vw;
+     color: #00e2e2;
+}
+
+.mil_label p:nth-child(2){
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 2.2vw;
+    color: whitesmoke;
+}
+
+.mil_label p:last-child{
+    color: whitesmoke;
+}
+
+.key_pad{
+    width: 100%;
+    background-color: #191e2a;
+}
+.row_one{
+    display: flex;
+}
+
+.row_one div{
+    flex: 1;
+    height: 80px;
+}
+
+.row_two{
+    display: flex;
+}
+
+.row_two div{
+    flex: 1;
+    height: 80px;
+}
+.row_three{
+    display: flex;
+}
+
+.row_three div{
+    flex: 1;
+    height: 80px;
+    display: flex;
+}
+
+.row_four{
+    display: flex;
+}
+
+.row_four div{
+    flex: 1;
+    height: 80px;
+}
+
+.key{
+    display: flex;
+}
+
+.key p{
+    margin:auto;
+
+    /* border: solid #00e2e2 2px; */
+    padding-top: 15px;
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    font-family: Helvetica;
+    font-size: 6vw;
+    color: white;
+    text-align: center;
+}
+
+.key p:active{
+    border: solid #00e2e2 2px;
+    color: #00e2e2;
+}
+
+.slider_container{
+    width: 100%;
+    background-color: #312f2e;
+    display: flex;
+    flex-direction: column;  
+}
+.tick_range{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.tick_range div{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1px;
+  background:rgba(0, 226, 226, 0.40);
+  height: 10px;
+  margin-left: 1px;
+}
+/* Slider */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  /* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid rgba(0, 226, 226, 0.29);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #00A5A5;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px rgba(0, 226, 226, 0.29), 0px 0px 1px rgba(0, 226, 226, 0.29); /* Add cool effects to your sliders! */
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    border: 1px solid rgba(0, 226, 226, 0.29);
+    border-radius: 50%;
+    background: #00A5A5;
+    box-shadow: 1px 1px 1px rgba(0, 226, 226, 0.29), 0px 0px 1px rgba(0, 226, 226, 0.29); /* Add cool effects to your sliders! */
+    height: 25px;
+    width: 25px;
+  
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.29);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.80);
+    box-shadow: 1px 1px 1px rgba(0, 226, 226, 0.29), 0px 0px 1px rgba(0, 226, 226, 0.29); /* Add cool effects to your sliders! */
+    cursor: pointer;
+  }
+
+  /***** Track *******/
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+   
+    background: #00e2e2;
+    border: 0.2px solid #00e2e2 ;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: #00e2e2;
+    border: 0.2px solid #00e2e2 ;  
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    /* background: transparent;
+    border-color: transparent; */
+    background: #00e2e2;
+    border: 0.2px solid #00e2e2 ;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #00e2e2;
+    border: 0.2px solid #00e2e2 ;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #00e2e2;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #00e2e2;
+    border: 0.2px solid #00e2e2 ;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px rgba(0, 226, 226, 0.29), 0px 0px 1px rgba(0, 226, 226, 0.29); /* Add cool effects to your sliders! */
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #00e2e2;
+  }
+
+  /* FOOTER STYLE */
+.footer{
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #343a40; */
+  color: whitesmoke;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.landing{
+  background-image: url("https://media.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.landing img {
+  width: 85%;
+}
+

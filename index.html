@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="generator" content="Hugo 0.55.4" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://drkrieger1.github.io//main_style.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>
+        Just Going To Send It
+        </title>
+</head>
+
+<body>
+    <div style="padding: 0px;" class="container-fluid">
+    <div class="header">
+
+        <nav class="navbar navbar-dark bg-dark">
+
+            <img class="navbar-brand" style="width: 40%" src="https://drkrieger1.github.io/img/logo2.png" />
+
+
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto nav_items">
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link" href="https://drkrieger1.github.io/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="https://drkrieger1.github.io/about">About</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="https://drkrieger1.github.io/howto">How To</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+    
+
+<div id="keypad" class="container-fluid pad_container">
+    <div class="row">
+        <div class="keypad_container">
+            <div class="display">
+                <div class="status">
+                    <div id="range_error" class="range_valid">
+                        <div id="warning_off">
+                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                            <p class="warning">OUT OF<br />RANGE</p>
+                        </div>
+                    </div>
+                    <div class="ark">
+
+                    </div>
+
+                </div>
+
+                <div class="outputs">
+                    <div class="mil">
+                        <div>
+                            <input type="number" id="elevation" readonly>
+                        </div>
+                        <div class="mil_label">
+                            <p>milliradian</p>
+                            <p>MIL</p>
+                            <p id="mil_dec">.00</p>
+                        </div>
+                    </div>
+                    <div class="meter">
+                        <div>
+                            <input id="code" oninput="change(this.value)" type="number">
+                        </div>
+                        <div class="mil_label">
+                            <p>meters</p>
+                            <p>M</p>
+                            <p>.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="slider_container">
+            <div class="tick_range">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <input id="slider" type="range" step="1" min="0" max="2000" value="1000" oninput="change(this.value)"
+                list="steplist">
+            <datalist id="steplist">
+                <option>0</option>
+                <option>500</option>
+                <option>1000</option>
+                <option>1500</option>
+                <option>2000</option>
+            </datalist>
+        </div>
+    </div>
+    <div class="row">
+        <div class="key_pad">
+            <div class="row_one">
+                <div class="key">
+                    <p onclick="handleClick(event)">1</p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">2</p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">3</p>
+                </div>
+            </div>
+            <div class="row_two">
+                <div class="key">
+                    <p onclick="handleClick(event)">4</p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">5</p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">6</p>
+                </div>
+            </div>
+            <div class="row_three">
+                <div class="key">
+                    <p onclick="handleClick(event)">7</p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">8</p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">9</p>
+                </div>
+            </div>
+            <div class="row_four">
+                <div class="key">
+                    <p onclick="del()"><i class="fas fa-chevron-left"></i>
+                    </p>
+                </div>
+                <div class="key">
+                    <p onclick="handleClick(event)">0</p>
+                </div>
+                <div class="key">
+                    <p onclick="clr()">C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <div class="container footer">
+    <p>Made using</p>
+    <img style="width: 50%;" src="https://drkrieger1.github.io/img/hugo-logo-wide.svg" />
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="https://drkrieger1.github.io/scripts/app.js"></script>
+</body>
+
+</html>
