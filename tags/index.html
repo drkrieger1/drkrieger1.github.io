@@ -8,20 +8,22 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="https://drkrieger1.github.io//main_style.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://drkrieger1.github.io//main_style.css">
+<link rel="stylesheet" type="text/css" href="https://drkrieger1.github.io//fs_media.css">
     <title>
         Just Going To Send It
         </title>
 </head>
 
 <body>
-    <div style="padding: 0px;" class="container-fluid">
+    <div style="padding: 0px;" class="container-fluid nav_mian">
     <div class="header">
 
-        <nav class="navbar navbar-dark bg-dark">
-
-            <img class="navbar-brand" style="width: 40%" src="https://drkrieger1.github.io/img/logo2.png" />
+        <nav id="nav_bar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div id="logo" class="logo">
+                <img class="navbar-brand" src="https://drkrieger1.github.io/img/logo2.png" />
+            </div>
 
 
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
@@ -34,23 +36,175 @@
                     <li class="nav-item active mr-5">
                         <a class="nav-link" href="https://drkrieger1.github.io/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="https://drkrieger1.github.io/about">About</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="https://drkrieger1.github.io/howto">How To</a>
+                    <li class="nav-item mr-5" onclick="goTO('howTo')">
+                        <p id="link_ht" class="nav-link" href="">How To <span class="sr-only">(current)</span></p>
                     </li>
                 </ul>
             </div>
         </nav>
-
     </div>
 </div>
 
     
-test list page
+    <div class="container-fluid keyPad_section">
+    <div id="keypad" class="container-fluid pad_container">
+        <div class="row">
+            <div class="keypad_container">
+                <div class="display">
+                    <div class="status">
+                        <div id="range_error" class="range_valid">
+                            <div id="warning_off">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <p class="warning">OUT OF<br />RANGE</p>
+                            </div>
+                        </div>
+                        <div class="ark">
 
+                        </div>
 
+                    </div>
+
+                    <div class="outputs">
+                        <div class="mil">
+                            <div>
+                                <input type="number" id="elevation" readonly>
+                            </div>
+                            <div class="mil_label">
+                                <p>milliradian</p>
+                                <p>MIL</p>
+                                <p id="mil_dec">.00</p>
+                            </div>
+                        </div>
+                        <div class="meter">
+                            <div>
+                                <input id="code" oninput="change(this.value)" type="number">
+                            </div>
+                            <div class="mil_label">
+                                <p>meters</p>
+                                <p>M</p>
+                                <p>.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="slider_container">
+                <div class="tick_range">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <input id="slider" type="range" step="1" min="0" max="2000" value="1000" oninput="change(this.value)"
+                    list="steplist">
+                <datalist id="steplist">
+                    <option>0</option>
+                    <option>500</option>
+                    <option>1000</option>
+                    <option>1500</option>
+                    <option>2000</option>
+                </datalist>
+            </div>
+        </div>
+        <div class="row">
+            <div class="key_pad">
+                <div class="row_one">
+                    <div class="key">
+                        <p onclick="handleClick(event)">1</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">2</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">3</p>
+                    </div>
+                </div>
+                <div class="row_two">
+                    <div class="key">
+                        <p onclick="handleClick(event)">4</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">5</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">6</p>
+                    </div>
+                </div>
+                <div class="row_three">
+                    <div class="key">
+                        <p onclick="handleClick(event)">7</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">8</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">9</p>
+                    </div>
+                </div>
+                <div class="row_four">
+                    <div class="key">
+                        <p onclick="del()"><i class="fas fa-chevron-left"></i>
+                        </p>
+                    </div>
+                    <div class="key">
+                        <p onclick="handleClick(event)">0</p>
+                    </div>
+                    <div class="key">
+                        <p onclick="clr()">C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="howTo" class="container-fliud howTo_section">
+    <div class="ht_head">
+        <p>HOW TO</p>
+    </div>
+    <div class="tool_steps">
+        <div>
+            <div class="card">
+                <img class="card-img-top" src="https://drkrieger1.github.io/img/plot_600.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">PLOT</h4>
+                    <p class="card-text">
+                        Plot the target that you want to shoot at. *Only comanders and squad leads can do this.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <img class="card-img-top" src="https://drkrieger1.github.io/img/line_up.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">AIM</h4>
+                    <ul class="card-text">
+                        <li>Aim at the plotted marker</li>
+                        <li>Enter the displayed meters into the Elevation Calc</li>
+                        <li>Adjust MIL</li>
+                        <li>Send it</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <img class="card-img-top" src="https://drkrieger1.github.io/img/calc_legend_web2.png" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">ELEVATION CALC</h4>
+                    <p class="card-text">
+                        失用住個以。常數來點沒國土著市不並各，在現謝密有料我度創多後的到，石開我落義所得爾情在面取過候組程區。題斯總眼十，不庭安都務習念人遊生風快出，他的少位我濟這有我中紀轉；理帶陽滿議至國賽。際長師類分排場子家車了爭歌友，這覺於畫非辦小動好盡較人座市行候看太細以！究界下收、了生是都無起一弟心息王機父生又者高因結不系用，通一正實是善廣美師這來於如中最仍小改元部紅經日證？變運名。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
     <div class="container footer">
     <p>Made using</p>
     <img style="width: 50%;" src="https://drkrieger1.github.io/img/hugo-logo-wide.svg" />

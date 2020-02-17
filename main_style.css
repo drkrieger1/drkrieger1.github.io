@@ -23,8 +23,11 @@ input[type=number] {
   font-family: arial;
   
 }
+
 .nav_items{
   font-family: helvetica;
+  color: white;
+  cursor: pointer;
 }
  /* keypad */
 .pad_back{ 
@@ -34,7 +37,6 @@ input[type=number] {
 
 .keypad_container{
     width: 100%;
-    
 }
 
 .mil {
@@ -387,3 +389,41 @@ input[type=range]::-webkit-slider-thumb {
   width: 85%;
 }
 
+.logo{
+  max-width: 20%;
+}
+.logo img{
+  width: 100%;
+}
+.keyPad_section{
+  /* width: 100%; */
+  height: 100vh;
+}
+
+/* How to section */
+.howTo_section{
+  background-color: darkgoldenrod;
+  /* width: 100%; */
+  min-height: 100vh;
+  /* padding: 10px; */
+}
+
+.ht_head{
+  padding: 10px;
+}
+.ht_head p{
+  color: white;
+  font-size: 3em;
+  font-family: Helvetica;
+}
+
+.tool_steps{
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.card{
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}

@@ -1,0 +1,56 @@
+/* Keys, input */
+@media(min-width: 622px){
+    .key p{
+       font-size: 2em; 
+    }
+    input[type=number] { 
+        font-size:5em;
+     } 
+    
+ 
+}
+
+@media(min-width: 800px){
+   .mil_label p:first-child{
+      font-size: 0.8em;
+   }
+   .mil_label p:nth-child(2){
+      font-size: 1.5em;  
+   }
+
+   .logo img{
+      width: 40%;
+    }
+
+}
+@media(min-width: 400px){
+   .range_error p{
+      font-size: 0.6em;
+   }
+   .range_error i{
+      font-size: 1.5em;
+   }
+   .range_valid p{
+      font-size: 0.6em;    
+  }
+  .range_valid i{
+      font-size: 1.5em;
+  }
+}
+
+@media(min-height: 900px){
+  .keyPad_section{
+     height: 60vh;
+  }
+}
+@media(max-width: 1000px){
+  .tool_steps{
+     flex-direction: column;
+  }
+ }
+
+ @media(max-width: 1000px){
+   .card{
+      max-width: 100%;
+   }
+  }

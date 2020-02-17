@@ -1,8 +1,10 @@
 'use strict';
 
+
 let mil = '';
 let meters = '';
 let navOpen = false;
+let lastScrollTop = 0;
 
 function handleClick(e) {
     if (navOpen) {
@@ -24,8 +26,6 @@ function calc() {
     const m = parseInt(meters);
     const valid = (m <= 1600 && m >= 100);
     const milDec = document.getElementById('mil_dec');
-
-    console.log(milDec);
 
     mil = ((m - 4224.25) / -4.21781).toString();
 
@@ -71,10 +71,39 @@ function hideNav() {
     navOpen = false;
 }
 
+function goTo(id) {
+    const targetSection = document.getElementById(id);
+
+    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    navOpen = false;
+}
+function navListeners() {
+    //overrides for bootstrap 
+    const logo = document.getElementById('logo');
+    const link = document.getElementById('link_ht');
+
+    logo.addEventListener('click', () => goTo('keypad'));
+    link.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goTo('howTo');
+    });
+}
 window.onload = () => {
+    navListeners();
     hideNav();
+
 }
 
 window.addEventListener('scroll', () => {
+
     navOpen = true;
-});
+    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    if (st > lastScrollTop) {
+        // downscroll code
+        console.log('scroll down');
+    } else {
+        // upscroll code
+        console.log('scroll UP');
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
